@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio23t2;
-
+//Importamos la clase Scanner para capturar la entrada
 import java.util.Scanner;
 
 /**
@@ -26,7 +26,7 @@ public class Ejercicio23T2 {
         El precio total de su compra es de: XXXX.XX Euros.
      */
     public static void main(String[] args) {
-        // declaro las variables
+        //Declaro las variables
         float precio, total;
         int unidades;
         Scanner input = new Scanner(System.in);
@@ -37,7 +37,7 @@ public class Ejercicio23T2 {
         System.out.print("Cuantas unidades quiere llevarse? ");
         unidades = input.nextInt();
         
-        //calculo el total
+        //Calculo el total
         total = precio*unidades;
         //Muestro por pantalla el resultado
         System.out.println("El precio total de su compra es de: "+ total +" Euros.");

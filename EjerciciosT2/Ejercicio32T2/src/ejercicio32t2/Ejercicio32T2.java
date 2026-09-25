@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio32t2;
+//Importamos la clase Scanner para capturar la entrada
 import java.util.Scanner;
 
 /**
@@ -40,14 +41,19 @@ public class Ejercicio32T2 {
         //Calculo la cantidad de billetes y monedas de cada tipo
         numBilletes50 = cantidadRestante / 50;
         cantidadRestante = cantidadRestante % 50;
+        
         numBilletes20 = cantidadRestante / 20;
         cantidadRestante = cantidadRestante % 20;
+        
         numBilletes10 = cantidadRestante / 10;
         cantidadRestante = cantidadRestante % 10;
+        
         numBilletes5 = cantidadRestante / 5;
         cantidadRestante = cantidadRestante % 5;
+        
         numMonedas2 = cantidadRestante / 2;
         cantidadRestante = cantidadRestante % 2;
+        
         numMonedas1 = cantidadRestante;
         //Muestro por pantalla el resultado
         System.out.println(cantidadInicial+" Euros se descomponen en "+numBilletes50+" billete(s) de 50 Euros,\n"

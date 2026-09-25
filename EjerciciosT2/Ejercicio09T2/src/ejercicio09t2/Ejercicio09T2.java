@@ -20,6 +20,7 @@ public class Ejercicio09T2 {
        La longitud de una circunferencia cuyo radio vale 3 sería
        igual a: xxx metros.
      */
+    //Declaracion de la constante PI
     final static float PI = 3.14f;
     
     public static void main(String[] args) {
