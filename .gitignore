@@ -1,6 +1,11 @@
 # Compiled class file
 *.class
 
+# Archivos generados por NetBeans
+/build/
+*.xml
+*.mf
+
 # Log file
 *.log
 
@@ -22,3 +27,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+/EjerciciosT3/Ejercicio04T3/nbproject/private/
+/EjerciciosT3/Ejercicio04T3/build/
+/EjerciciosT3/JavaApplication27/nbproject/private/
+/EjerciciosT3/Ejercicio05T3/nbproject/private/
+/EjerciciosT3/Ejercicio05T3/build/
+/EjerciciosT3/Ejercicio06T3/nbproject/private/
