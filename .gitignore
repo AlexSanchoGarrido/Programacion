@@ -3,8 +3,10 @@
 
 # Archivos generados por NetBeans
 /build/
+/private/
 *.xml
 *.mf
+*.properties
 
 # Log file
 *.log
@@ -39,3 +41,4 @@ replay_pid*
 /EjerciciosT3/Ejercicio08T3/nbproject/private/
 /EjerciciosT3/Ejercicio08T3/build/
 /EjerciciosT3/Ejercicio08T3/dist/
+/EjerciciosT3/PruebaGitIgnore/nbproject/private/
