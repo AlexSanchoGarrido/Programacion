@@ -4,7 +4,7 @@
  */
 
 package ejercicio06t3;
-import 
+import java.util.Scanner;
 /**
  *
  * @author Alexis Sancho
@@ -25,7 +25,23 @@ public class Ejercicio06T3 {
      */
     public static void main(String[] args) {
         // Declaro las variables
-        int nota;
+        float nota;
+        Scanner input = new Scanner(System.in);
+        
+        //Solicito introducir la nota:
+        System.out.print("Introduzca la nota: ");
+        nota = input.nextFloat();
+        
+        if( 0 <= nota && nota < 5 )
+            System.out.println("Su calificacion es: suspenso");
+        else if( 5 <= nota && nota < 7 )
+            System.out.println("Su calificacion es: bien");
+        else if( 7 <= nota && nota < 9 )
+            System.out.println("Su calificacion es: notable");
+        else if( 9 <= nota && nota <= 10 )
+            System.out.println("Su calificacion es: suspenso");
+        else
+            System.out.println("La nota debe encontrarse entre 0 y 10");
         
     }
 
