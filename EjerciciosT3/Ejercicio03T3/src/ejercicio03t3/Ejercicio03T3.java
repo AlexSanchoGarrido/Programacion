@@ -23,16 +23,19 @@ public class Ejercicio03T3 {
      */
     public static void main(String[] args) {
         // Declaro las variables 
-        float numeroMayor, nuevoNumero;
+        float numeroMayor, nuevoNumero;      
         Scanner input = new Scanner(System.in);
         
         //Pido al usuario que introduzca el primer numero
+        System.out.print("Introduzca el primer numero:");  
         numeroMayor = input.nextFloat();
         //Pido al usuario que introduza el segundo numero
+        System.out.print("Introduzca el primer numero:");  
         nuevoNumero = input.nextFloat();
         if(nuevoNumero > numeroMayor)
             numeroMayor = nuevoNumero;
         //Pido al usuario que introduzca el tercer numero
+        System.out.print("Introduzca el tercer numero:");
         nuevoNumero = input.nextFloat();
         if(nuevoNumero > numeroMayor)
             numeroMayor = nuevoNumero;

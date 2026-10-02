@@ -25,23 +25,49 @@ public class Ejercicio06T3 {
      */
     public static void main(String[] args) {
         // Declaro las variables
-        float nota;
+        int nota;
         Scanner input = new Scanner(System.in);
         
         //Solicito introducir la nota:
         System.out.print("Introduzca la nota: ");
-        nota = input.nextFloat();
+        nota = input.nextInt();
         
         if( 0 <= nota && nota < 5 )
             System.out.println("Su calificacion es: suspenso");
-        else if( 5 <= nota && nota < 7 )
+        else if( 4 < nota && nota < 7 )
             System.out.println("Su calificacion es: bien");
-        else if( 7 <= nota && nota < 9 )
+        else if( 6 < nota && nota < 9 )
             System.out.println("Su calificacion es: notable");
-        else if( 9 <= nota && nota <= 10 )
-            System.out.println("Su calificacion es: suspenso");
+        else if( 8 < nota && nota <= 10 )
+            System.out.println("Su calificacion es: sobresaliente");
         else
             System.out.println("La nota debe encontrarse entre 0 y 10");
+        
+        // SOLUCION ALTERNATIVA CON SWITCH
+//        switch(nota){
+//            case 0:
+//            case 1:
+//            case 2:
+//            case 3:
+//            case 4:
+//                System.out.println("Su calificacion es: suspenso");
+//                break;
+//            case 5:
+//            case 6:
+//                System.out.println("Su calificacion es: bien");
+//                break;
+//            case 7:
+//            case 8:
+//                System.out.println("Su calificacion es: notable");
+//                break;
+//            case 9:
+//            case 10:
+//                System.out.println("Su calificacion es: sobresaliente");
+//                break;
+//            default:
+//                System.out.println("La nota debe encontrarse entre 0 y 10");
+//            
+//        }
         
     }
 

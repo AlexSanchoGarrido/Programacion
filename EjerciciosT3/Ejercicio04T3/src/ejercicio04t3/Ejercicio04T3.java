@@ -23,13 +23,16 @@ public class Ejercicio04T3 {
         Scanner input = new Scanner(System.in);
         
         //Pido al usuario que introduzca el primer numero
+        System.out.print("Introduzca el primer numero:");
         numeroMenor = input.nextFloat();
         //Pido al usuario que introduza el segundo numero
+        System.out.print("Introduzca el segundo mumero:");
         nuevoNumero = input.nextFloat();
         //compruebo si el numero es mas pequeño que el menor
         if(nuevoNumero < numeroMenor)
             numeroMenor = nuevoNumero;
         //Pido al usuario que introduzca el tercer numero
+        System.out.print("Introduzca el tercer numero:");
         nuevoNumero = input.nextFloat();
         //compruebo si el numero es mas pequeño que el menor
         if(nuevoNumero < numeroMenor)

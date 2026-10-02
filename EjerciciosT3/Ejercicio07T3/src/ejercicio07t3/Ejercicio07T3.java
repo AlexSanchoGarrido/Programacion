@@ -24,8 +24,15 @@ public class Ejercicio07T3 {
         Scanner input = new Scanner(System.in);
         
         //Solicito que introduzcan un dia de la semana
-        System.out.println("Introduce el numero correspondiente al dia de la semana:\n"
-                + "1 Lunes\n2 Martes\n3 Miercoles\n4 Jueves\n5 Viernes\n6 Sabado\n7 Domingo");
+        System.out.println("""
+                           Introduce el numero correspondiente al dia de la semana:
+                           1 Lunes
+                           2 Martes
+                           3 Miercoles
+                           4 Jueves
+                           5 Viernes
+                           6 Sabado
+                           7 Domingo""");
         diasemana = input.nextInt();        
         
         switch (diasemana) {
