@@ -24,25 +24,21 @@ public class Ejercicio31T3 {
      */
     public static void main(String[] args) {
         // Declaro las variables
-        int random, impar1 = 0, impar2 = 0, impar3 = 0;
+        int random;
+        int cantidadImpares = 0;
         int cantidadGenerados = 0;
         //Mientras el impar 3 este sin asignar
-        while(impar3 == 0){
+        while(cantidadImpares < 3){
             //Genero un numero aleatorio
             random = (int)(Math.random()*100 +1);
             cantidadGenerados++;
             //Si es impar y el primero no esta asignado
-            if(random % 2 != 0 && impar1 == 0)
-                impar1 = random;
-            //Si es impar y el segundo no esta asignado
-            else if(random % 2 != 0 && impar2 == 0)
-                impar2 = random;
-            //Si es impar y el primero y segundo SI estan asignados
-            else if(random % 2 != 0)
-                impar3 = random;
+            if(random % 2 != 0){
+                System.out.println("Numero impar generado: "+random);
+                cantidadImpares++;
+            }
         }
         //Muestro los resultados por pantalla
-        System.out.println("Impar 1: "+impar1+", Impar 2: "+impar2+", Impar 3: "+impar3);
         System.out.println("Cantidad de numeros generados: "+cantidadGenerados);
     }
 

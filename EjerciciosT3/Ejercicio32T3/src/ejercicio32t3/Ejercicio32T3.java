@@ -29,43 +29,43 @@ public class Ejercicio32T3 {
      */
     public static void main(String[] args) {
         //Declaro las variables
-        int anio_act, mes_act, dia_act;
-        int anio_nac, mes_nac, dia_nac;
+        int anioAct, mesAct, diaAct;
+        int anioNac, mesNac, diaNac;
         Scanner input = new Scanner(System.in);
-        int anio_sol, mes_sol, dia_sol;
+        int anioSol, mesSol, diaSol;
         
         //Solicito al usuario que introduzca datos actuales
         System.out.print("Introduzca el anio actual: ");
-        anio_act = input.nextInt();
+        anioAct = input.nextInt();
         System.out.print("Introduzca el mes actual: ");
-        mes_act = input.nextInt();
+        mesAct = input.nextInt();
         System.out.print("Introduzca el dia actual: ");
-        dia_act = input.nextInt();
+        diaAct = input.nextInt();
         
         //Solicito al usuario que introduzca datos de su fecha de nacimiento
         System.out.print("introduzca su anio de nacimiento: ");
-        anio_nac = input.nextInt();
+        anioNac = input.nextInt();
         System.out.print("Introduzca su mes de nacimiento: ");
-        mes_nac = input.nextInt();
+        mesNac = input.nextInt();
         System.out.print("Por ultimo introduzca su dia de nacimiento: ");
-        dia_nac = input.nextInt();
+        diaNac = input.nextInt();
         
-        anio_sol = anio_act - anio_nac;
-        mes_sol = mes_act - mes_nac;
-        dia_sol = dia_act - dia_nac;
+        anioSol = anioAct - anioNac;
+        mesSol = mesAct - mesNac;
+        diaSol = diaAct - diaNac;
         //Compruebo que los meses y los dias cuadren
         //Si el mes actual es superior al mes de nacimiento, resto un año y sumo 12 meses para ajustar
-        if(mes_sol < 0){
-            mes_sol = mes_sol +12;
-            anio_sol--;
+        if(mesSol < 0){
+            mesSol = mesSol +12;
+            anioSol--;
         }
         //Si el dia actual es superior al dia de nacimiento, resto un mes y sumo 30 dias para ajustar
-        if(dia_sol < 0){
-            dia_sol = dia_sol + 30;
-            mes_sol--;
+        if(diaSol < 0){
+            diaSol = diaSol + 30;
+            mesSol--;
         }
         
-        System.out.println("Su edad exacta es de "+anio_sol+" anios, "+mes_sol+" meses y "+dia_sol+" dias.");
+        System.out.println("Su edad exacta es de "+anioSol+" anios, "+mesSol+" meses y "+diaSol+" dias.");
     }
 
 }
