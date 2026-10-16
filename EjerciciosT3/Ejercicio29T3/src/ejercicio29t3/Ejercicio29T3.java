@@ -28,7 +28,7 @@ public class Ejercicio29T3 {
     public static void main(String[] args) {
         // Declaro las variables
         //Declaro random como FINAL ya que es una constante
-        final int random = (int)(Math.random()*100 +1);
+        final int RANDOM = (int)(Math.random()*100 +1);
         int num, intentos = 0;
         Scanner input = new Scanner(System.in);
         
@@ -43,18 +43,18 @@ public class Ejercicio29T3 {
                 System.out.print("Introduzca otro numero: ");
             }else{
                 //Muestro si el numero es mayor o menor
-                if(num < random)
+                if(num < RANDOM)
                     System.out.print("Error! El numero a adivinar es MAYOR. Introduzca otro numero: ");
-                else if(num > random)
+                else if(num > RANDOM)
                     System.out.print("Error! El numero a adivinar es MENOR. Introduzca otro numero: ");
                 //Aumenta el numero de intentos
                 intentos++;
             }
             //Mientras no se adivine el numero el bucle continua
-        }while(num != random);
+        }while(num != RANDOM);
         
         //Muestro por pantalla el resultado
-        System.out.println("Ha adivinado el numero! El numero es: "+ random +" y ha empleado "+intentos+" intentos en adivinarlo.");
+        System.out.println("Ha adivinado el numero! El numero es: "+ RANDOM +" y ha empleado "+intentos+" intentos en adivinarlo.");
     }
 
 }

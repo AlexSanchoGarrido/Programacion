@@ -35,7 +35,7 @@ public class Ejercicio09T3 {
         
         //Con 4 posiciones tengo que hacer 3 iteraciones maximo para ordenarlos
         //Uso una variable auxiliar para intercambiar los valores entre variables
-        if(num1>num2){
+        if(num1>num2){//Comprobar el orden en las posiciones e intercambiar si es necesario
             aux = num1;
             num1 = num2;
             num2 = aux;
@@ -50,7 +50,7 @@ public class Ejercicio09T3 {
         }
         
         //Compruebo si esta ordenado, sino iteracion 2
-        if(num1 > num2 || num2 > num3 || num3 > num4){
+        if(num1 > num2 || num2 > num3 || num3 > num4){//Comprobar el orden en las posiciones e intercambiar si es necesario
             if(num1>num2){
             aux = num1;
             num1 = num2;
@@ -67,7 +67,7 @@ public class Ejercicio09T3 {
         }
         
         //Compruebo si esta ordenado, sino iteracion 3
-        if(num1 > num2 || num2 > num3 || num3 > num4){
+        if(num1 > num2 || num2 > num3 || num3 > num4){//Comprobar el orden en las posiciones e intercambiar si es necesario
             if(num1>num2){
             aux = num1;
             num1 = num2;
