@@ -4,6 +4,7 @@
  */
 package ejercicio03t4;
 
+import Metodos.Metodos;
 import java.util.Scanner;
 
 /**
