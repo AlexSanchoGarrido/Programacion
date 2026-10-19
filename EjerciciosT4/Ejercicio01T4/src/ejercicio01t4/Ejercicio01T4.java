@@ -25,11 +25,11 @@ public class Ejercicio01T4 {
      */
     public static void positivoNegativo(float n) {
         System.out.print("El numero introducido es ");
-        if (n > 0) {
+        if (n > 0) {    //Caso en el que es positivo
             System.out.println("positivo.");
-        } else if (n < 0) {
+        } else if (n < 0) { //Caso en el que es negativo
             System.out.println("negativo. ");
-        } else {
+        } else {    //Caso en el que es cero
             System.out.println("cero.");
         }
     }

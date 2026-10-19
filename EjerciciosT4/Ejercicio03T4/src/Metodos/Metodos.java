@@ -6,7 +6,8 @@ package Metodos;
 
 /**
  *
- * @author alumno
+ * @author Alexis Sancho
+ * @since 16 oct 2026
  */
 public class Metodos {
 

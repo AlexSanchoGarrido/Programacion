@@ -36,7 +36,7 @@ public class Ejercicio03T4 {
         System.out.print("Por ultimo, introduzca un tercer numero: ");
         num3 = input.nextFloat();
 
-        //Llamo al metodo estatico de la clase
+        //Llamo al metodo estatico de la clase Metodos en el paquete Metodos
         Metodos.mostrarMayor(num1, num2, num3);
     }
 

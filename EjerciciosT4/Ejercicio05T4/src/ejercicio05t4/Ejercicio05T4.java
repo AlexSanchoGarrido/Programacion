@@ -29,7 +29,7 @@ public class Ejercicio05T4 {
         System.out.print("Introduzca un numero: ");
         num = input.nextInt();
 
-        //Llamo al metodo estatico de la clase metodos
+        //Llamo al metodo estatico de la clase Metodos del paquete Metodos
         Metodos.parImpar(num);
     }
 
