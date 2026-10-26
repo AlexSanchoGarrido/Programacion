@@ -28,13 +28,25 @@ public class Ejercicio17T4 {
      */
     public static char pedirLetra() {
         Scanner input = new Scanner(System.in);
-        try {
-            return input.nextLine().charAt(0);
-        } catch (Exception MismatchException) {
-            System.out.println("Error! Debe introducir una letra!");
-            return pedirLetra();
-        }
+        System.out.print("Introduzca una letra: ");
+        return input.nextLine().charAt(0);
+    }
 
+    public static boolean aciertaLetra(int asciiLetraIn, int asciiLetraAl) {
+        return asciiLetraIn == asciiLetraAl;
+    }
+
+    public static void mostrarMayorOMenor(int asciiLetraIn, int asciiLetraAl) {
+        if (asciiLetraIn > asciiLetraAl) {
+            System.out.println("Letra erronea! La letra a adivinar se encuentra antes en el abecedario.");
+        } else {
+            System.out.println("Letra erronea! La letra a adivinar se encuentra despues en el abecedario.");
+        }
+    }
+
+    public static void mostrarResultados(char asciiLetraAl, int intentos) {
+        System.out.println("ENHORABUENA! Ha ganada el juego!");
+        System.out.println("La letra a adivinar era \"" + asciiLetraAl + "\" y le ha tomado una cantidad de " + intentos + " intentos adivinarlo.");
     }
 
     public static void main(String[] args) {
@@ -44,8 +56,23 @@ public class Ejercicio17T4 {
         //y el segundo el fin exclusive
         int asciiLetraAleatoria = numRandom.nextInt(97, 123);
         char letraIntroducida;
-        System.out.println("Bienvenido al juego ADIVINAR UNA LETRA");
+        int asciiLetraIntroducida;
+        int intentos = 1;
+        System.out.println("""
+                           --------------------------------------
+                           Bienvenido al juego ADIVINAR UNA LETRA
+                           --------------------------------------
+                            """);
         letraIntroducida = pedirLetra();
+        asciiLetraIntroducida = (int) letraIntroducida;
+        while (!aciertaLetra(asciiLetraIntroducida, asciiLetraAleatoria)) {
+            mostrarMayorOMenor(asciiLetraIntroducida, asciiLetraAleatoria);
+            System.out.print("Letra erronea!");
+            letraIntroducida = pedirLetra();
+            asciiLetraIntroducida = (int) letraIntroducida;
+            intentos++;
+        }
+        mostrarResultados((char) asciiLetraAleatoria, intentos);
     }
 
 }
