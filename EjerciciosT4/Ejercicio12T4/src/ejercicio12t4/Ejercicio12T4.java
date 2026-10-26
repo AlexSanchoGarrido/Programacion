@@ -26,25 +26,38 @@ public class Ejercicio12T4 {
     public static int pideContrasenia() {
         //Declaro el scanner
         Scanner input = new Scanner(System.in);
+        //Solicito que introduzca contraseña y la devuelvo
         System.out.print("Introduce una contrasenia: ");
         return input.nextInt();
 
     }
 
     public static boolean esCorrectaContrasenia(int pass) {
+        //Comprueba si la contraseña es la adecuada
         return pass == PASS;
     }
 
-    public static void esContrasenia() {
-        int intentos = 0;
-        while (intentos < 3 || !esCorrectaContrasenia(pideContrasenia())) {
-            System.out.println("Error! Contrasenia incorrecta");
+    public static void comprobarContrasenia(boolean acierto, int intentos) {
+        if (acierto) {
+            System.out.println("Enhorabuena! Ha acertado la contrasenia");
+        } else if (intentos < 2) {
+            System.out.println("Error! Contrasenia incorrecta.");
+        } else {
+            System.out.println("Fin del programa! Aciertos agotados");
         }
     }
 
     public static void main(String[] args) {
-        //
-        esContrasenia();
+        //Declaro las variables
+        int intentos = 0;
+        boolean contraseniaCorrecta = false; //Boolean para iterar y darle a conocer a comprob
+        int pass = 0;
+        while (intentos < 3 && !contraseniaCorrecta) {
+            pass = pideContrasenia();
+            contraseniaCorrecta = esCorrectaContrasenia(pass);
+            comprobarContrasenia(contraseniaCorrecta, intentos);
+            intentos++;
+        }
     }
 
 }
