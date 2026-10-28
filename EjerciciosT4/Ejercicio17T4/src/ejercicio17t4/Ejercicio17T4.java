@@ -27,9 +27,19 @@ public class Ejercicio17T4 {
      * usuario, utiliza: char letra=entrada.nextLine().charAt(0);
      */
     public static char pedirLetra() {
+        //Creo un objeto Scanner para capturar la entrada del usuario
         Scanner input = new Scanner(System.in);
         System.out.print("Introduzca una letra: ");
-        return input.nextLine().charAt(0);
+        char letraIntroducida = input.nextLine().charAt(0);
+        //Esas funciones del objeto input de la clase Scanner devuelven
+        //el primer char introducido por teclado. Con este bucle compruebo 
+        //que sea una letra de a-z y sino sigue pidiendo entrada.
+        if((int)letraIntroducida < 97 || (int)letraIntroducida > 122){
+            System.out.println("El caracter introducido no es una letra.");
+            System.out.print("Ingrese de nuevo un caracter: ");
+            letraIntroducida = input.nextLine().charAt(0);
+        }
+        return letraIntroducida;
     }
 
     public static boolean aciertaLetra(int asciiLetraIn, int asciiLetraAl) {
@@ -37,16 +47,27 @@ public class Ejercicio17T4 {
     }
 
     public static void mostrarMayorOMenor(int asciiLetraIn, int asciiLetraAl) {
+        //Muestro en función de la diferencia de posicion entre los caracteres ASCII
         if (asciiLetraIn > asciiLetraAl) {
-            System.out.println("Letra erronea! La letra a adivinar se encuentra antes en el abecedario.");
+            System.out.println("Letra erronea! - La letra a adivinar se encuentra antes en el abecedario.");
         } else {
-            System.out.println("Letra erronea! La letra a adivinar se encuentra despues en el abecedario.");
+            System.out.println("Letra erronea! - La letra a adivinar se encuentra despues en el abecedario.");
         }
     }
 
     public static void mostrarResultados(char asciiLetraAl, int intentos) {
+        System.out.println("--------------------------------------");
         System.out.println("ENHORABUENA! Ha ganada el juego!");
         System.out.println("La letra a adivinar era \"" + asciiLetraAl + "\" y le ha tomado una cantidad de " + intentos + " intentos adivinarlo.");
+        System.out.println("--------------------------------------");
+    }
+
+    public static void mostrarCabecera() {
+        System.out.println("""
+                           --------------------------------------
+                           Bienvenido al juego ADIVINAR UNA LETRA
+                           --------------------------------------
+                            """);
     }
 
     public static void main(String[] args) {
@@ -55,21 +76,24 @@ public class Ejercicio17T4 {
         //En la funcion nextInt() el primer argumento implica el origen inclusive
         //y el segundo el fin exclusive
         int asciiLetraAleatoria = numRandom.nextInt(97, 123);
+        //Variables para la letra introducida, sun numero ASCII y los intentos
         char letraIntroducida;
         int asciiLetraIntroducida;
         int intentos = 1;
-        System.out.println("""
-                           --------------------------------------
-                           Bienvenido al juego ADIVINAR UNA LETRA
-                           --------------------------------------
-                            """);
+        //Funcion para mostrar la cabecera del juego
+        mostrarCabecera();
+        //Solicito introducir la letra por primera vez
         letraIntroducida = pedirLetra();
         asciiLetraIntroducida = (int) letraIntroducida;
+        //Mientras no se acierte la letra (comprobado en el metodo aciertaLetra()
+        //seguimos iterando
         while (!aciertaLetra(asciiLetraIntroducida, asciiLetraAleatoria)) {
+            //Funcion mostrarMayorOMenor() que informa al usuario sobre su situacion
             mostrarMayorOMenor(asciiLetraIntroducida, asciiLetraAleatoria);
-            System.out.print("Letra erronea!");
+            //Volvemos a solicitar otra letra y a traducirla a ASCII
             letraIntroducida = pedirLetra();
             asciiLetraIntroducida = (int) letraIntroducida;
+            //Aumentamos los intentos para mostrarlos al final del programa
             intentos++;
         }
         mostrarResultados((char) asciiLetraAleatoria, intentos);
