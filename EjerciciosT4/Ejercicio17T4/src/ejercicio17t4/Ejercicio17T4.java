@@ -82,21 +82,19 @@ public class Ejercicio17T4 {
         int intentos = 1;
         //Funcion para mostrar la cabecera del juego
         mostrarCabecera();
-        //Solicito introducir la letra por primera vez
-        letraIntroducida = pedirLetra();
-        asciiLetraIntroducida = (int) letraIntroducida;
-        //Mientras no se acierte la letra (comprobado en el metodo aciertaLetra()
-        //seguimos iterando
-        while (!aciertaLetra(asciiLetraIntroducida, asciiLetraAleatoria)) {
-            //Funcion mostrarMayorOMenor() que informa al usuario sobre su situacion
-            mostrarMayorOMenor(asciiLetraIntroducida, asciiLetraAleatoria);
-            //Volvemos a solicitar otra letra y a traducirla a ASCII
+        do{
+            //Solicitamos una letra y a la traduzco a ASCII
             letraIntroducida = pedirLetra();
             asciiLetraIntroducida = (int) letraIntroducida;
+            //Funcion mostrarMayorOMenor() que informa al usuario sobre su situacion
+            mostrarMayorOMenor(asciiLetraIntroducida, asciiLetraAleatoria);
             //Aumentamos los intentos para mostrarlos al final del programa
             intentos++;
-        }
-        mostrarResultados((char) asciiLetraAleatoria, intentos);
+        //Mientras no se acierte la letra (comprobado en el metodo aciertaLetra()
+        //seguimos iterando
+        }while(!aciertaLetra(asciiLetraIntroducida, asciiLetraAleatoria));
+        
+        mostrarResultados((char) asciiLetraAleatoria, --intentos);
     }
 
 }
