@@ -38,16 +38,20 @@ public class Ejercicio20T4 {
     static final String solucionCuestion1 = "Madrid";
     static final String solucionCuestion2 = "Colon";
     
-    public static boolean primeraCuestion(){
+    public static boolean aciertaCuestion(int numeroCuestion){
+        //Declaro un objeto de tipo Scanner para capturar la entrada
         Scanner input = new Scanner(System.in);
-        System.out.println("1ra PREGUNTA: Cual es la capital de Espania?");
-        return input.nextLine().equalsIgnoreCase(solucionCuestion1);
-    }
-    
-    public static boolean segundaCuestion(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("2da PREGUNTA: Quien descubrio America?");
-        return input.nextLine().equalsIgnoreCase(solucionCuestion2);
+        String solucion = "";
+        //Devuelvo la captura de un String por la entrada, que comprueba
+        //mediante el metodo equalsIgnoreCase() con las constantes solucion
+        if(numeroCuestion == 1){
+            System.out.println("1ra PREGUNTA: Cual es la capital de Espania?");
+            solucion = solucionCuestion1;
+        }else if(numeroCuestion == 2){
+            System.out.println("2da PREGUNTA: Quien descubrio America?");
+            solucion = solucionCuestion2;
+        }
+        return input.nextLine().equalsIgnoreCase(solucion);
     }
     
     public static void main(String[] args) {
@@ -55,8 +59,8 @@ public class Ejercicio20T4 {
         int nota;
         boolean aciertaPrimera = false, aciertaSegunda = false;
         //Compruebo si acierta la primera y la segunda pregunta, y lo almaceno en variables
-        aciertaPrimera = primeraCuestion();
-        aciertaSegunda = segundaCuestion();
+        aciertaPrimera = aciertaCuestion(1);
+        aciertaSegunda = aciertaCuestion(2);
         //Si acierta ambas
         if(aciertaPrimera && aciertaSegunda){
             nota = 10;
