@@ -71,11 +71,9 @@ public class Ejercicio17T4 {
     }
 
     public static void main(String[] args) {
-        //
-        Random numRandom = new Random();
-        //En la funcion nextInt() el primer argumento implica el origen inclusive
-        //y el segundo el fin exclusive
-        int asciiLetraAleatoria = numRandom.nextInt(97, 123);
+        //Uso la formula: Math.random()*(MAX-MIN+1)+MIN, hago Math.floor() para
+        //truncarlo, y finalmente lo casteo explicitamente a int
+        int asciiLetraAleatoria = (int)Math.floor(Math.random()*(122-97+1)+97);
         //Variables para la letra introducida, sun numero ASCII y los intentos
         char letraIntroducida;
         int asciiLetraIntroducida;
