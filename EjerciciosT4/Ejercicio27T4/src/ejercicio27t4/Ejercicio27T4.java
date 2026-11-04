@@ -6,7 +6,6 @@
 package ejercicio27t4;
 
 
-import java.util.Random;
 import java.util.Scanner;
 
 /**
