@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @since 28 oct 2026
  */
 public class Ejercicio20T4 {
-
+    //Linea añadida para commit de entrega
     /**
      * • Ejercicio 20.- Realiza un programa que le haga un examen al usuario, preguntándole cuál
         es la capital de España y quién descubrió América.

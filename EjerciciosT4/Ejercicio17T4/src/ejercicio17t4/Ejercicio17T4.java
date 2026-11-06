@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @since 26 oct 2026
  */
 public class Ejercicio17T4 {
-
+    //Linea añadida para commit de entrega
     /**
      * • Ejercicio 17.- Escribe un programa que juegue con el usuario a adivinar
      * una letra minúscula. El ordenador debe generar una letra aleatoria entre

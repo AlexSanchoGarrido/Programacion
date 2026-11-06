@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @since 26 oct 2026
  */
 public class Ejercicio14T4 {
-
+    //Linea añadida para commit de entrega
     /**
      * • Ejercicio 14.- Crea un programa en JAVA que que imprima todos los
      * números múltiplos de 3 que existen entre el número 1 y otro número
@@ -22,7 +22,7 @@ public class Ejercicio14T4 {
      * mostrados. • Crea un método para pedir el dato al usuario, otro para
      * comprobar que es mayor que 0 y otro para hacer los cálculos y mostrar el
      * resultado.
-     */
+     */ 
     public static int pedirNumero() {
         //Declaro un objeto scanner para capturar la entrada
         Scanner input = new Scanner(System.in);

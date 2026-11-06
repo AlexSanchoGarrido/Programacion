@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @since 30 oct 2026
  */
 public class Ejercicio26T4 {
-
+    //Linea añadida para commit de entrega
     /**
      * • Ejercicio 26.- Escribe un programa que contenga un método
         llamado esPrimo que reciba un número entero como
@@ -54,7 +54,7 @@ public class Ejercicio26T4 {
         return num;
     }
     
-    public static boolean esNumeroPrimo(int num){
+    public static boolean tieneDivisor(int num){
         //Variable para iterar, 1 sabemos que siempre es divisor asi que empezamos en 2
         //Además, en el caso que num==1 o num==2 no entra en el bucle y funciona igual
         int i = 2;
@@ -70,12 +70,7 @@ public class Ejercicio26T4 {
             i++;
         }
         //Si no ha encontrado divisor, sigue inicializado a false. Si lo tiene, es que no es primo
-        //entonces devuelvo la negación para indicar que no es primo (!tieneDivisor).
-        //(El metodo indica si ES PRIMO y la logica del metodo indica si TIENE DIVISOR, como son
-        //cosas opuestas devuelvo !tieneDivisor porque aunque sea contraintutivo demostrar lo contrario
-        //es más facil entender la logica de la iteracion, porque una supuesta variable "NoTieneDivisor = false"
-        //es mas compleja de entender en un vistazo rápido
-        return !tieneDivisor;
+        return tieneDivisor;
     }
     
     public static void main(String[] args) {
@@ -83,8 +78,8 @@ public class Ejercicio26T4 {
         //Llamo a la funcion pedirNumero() que solicita un entero e itera mientras no se introduzca
         //un numero entero
         int numero = pedirNumero();
-        //Llamo al metodo esNumeroPrimo con numero como argumento que me devuelve si num es primo
-        if(esNumeroPrimo(numero))
+        //Llamo al metodo tieneDivisor con numero como argumento que me devuelve si num tiene divisor
+        if(!tieneDivisor(numero))
             System.out.println("El numero "+numero+" SI es un numero primo.");
         else
             System.out.println("El numero "+numero+" NO es un numero primo.");
