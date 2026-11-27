@@ -50,6 +50,7 @@ public class Test {
         return nuevaNota;
     }
 
+    //PRueba para git bash
     public static void main(String args[]) {
         //Creo tres objetos de la clase alumno
         System.out.println("Datos para Alumno 1: ");
