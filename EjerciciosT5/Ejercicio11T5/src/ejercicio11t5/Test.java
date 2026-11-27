@@ -28,16 +28,8 @@ public class Test {
     public static float pedirNumero() {
         //Creo un objeto de tipo Scanner para capturar la entrada
         Scanner input = new Scanner(System.in);
-        System.out.print("Introduzca un numero: ");
+        System.out.print("Introduzca un valor: ");
         return input.nextFloat();
-    }
-
-    public static void sumar(Numero n1, Numero n2) {
-        System.out.println("El resultado de la suma de " + n1.getValor() + " y " + n2.getValor() + " es " + n1.getValor() + n2.getValor());
-    }
-
-    public static void multiplicar(Numero n1, Numero n2) {
-        System.out.println("El resultado de la multiplicacion de " + n1.getValor() + " y " + n2.getValor() + " es " + n1.getValor() * n2.getValor());
     }
 
     public static void main(String[] args) {
@@ -46,16 +38,16 @@ public class Test {
         Numero num2 = new Numero();
 
         //Solicito al usuario que les de valor, y se lo paso al metodo setValor de Numero
-        System.out.println("PRIMER NUMERO:");
+        System.out.print("PRIMER NUMERO - ");
         num1.setValor(pedirNumero());
-        System.out.println("SEGUNDO NUMERO:");
+        System.out.print("SEGUNDO NUMERO - ");
         num2.setValor(pedirNumero());
 
         //Opero dependiendo del valor
         if (num1.getValor() > 10) {
-            multiplicar(num1, num2);
+            num1.multiplicar(num2);
         } else {
-            sumar(num1, num2);
+            num1.sumar(num2);
         }
     }
 }

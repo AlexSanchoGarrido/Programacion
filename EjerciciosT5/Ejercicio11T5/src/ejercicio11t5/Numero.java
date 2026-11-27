@@ -21,6 +21,14 @@ public class Numero {
         this.valor = n;
     }
     
+    public void sumar(Numero n2) {
+        System.out.println("El resultado de la suma de " + this.getValor() + " y " + n2.getValor() + " es " + (this.getValor() + n2.getValor()));
+    }
+
+    public void multiplicar(Numero n2) {
+        System.out.println("El resultado de la multiplicacion de " + this.getValor() + " y " + n2.getValor() + " es " + this.getValor() * n2.getValor());
+    }
+    
     public float getValor(){
         return this.valor;
     }

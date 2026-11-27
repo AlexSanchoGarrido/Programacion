@@ -26,6 +26,14 @@ public class Triangulo {
         cateto2 = c2;
     }
     
+    public float hipotenusa(){
+        return (float)Math.sqrt(Math.pow(this.getCateto1(), 2) + Math.pow(this.getCateto2(), 2));
+    }
+    
+    public void mostrarHipotenusa() {
+        System.out.println("La hipotenusa del triangulo de lados " + this.getCateto1() + " y " + this.getCateto2() + " es " + this.hipotenusa());
+    }
+    
     //Getters y setters
     public float getCateto1() {
         return cateto1;
